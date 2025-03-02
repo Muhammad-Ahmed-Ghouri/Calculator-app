@@ -21,6 +21,7 @@ buttonsArray.forEach((button) => {
         finalResult = "";
         return;
       }
+
       if (finalResult.charAt(finalResult.length - 1) === "%") {
         finalResult = finalResult.slice(0, -1) / 100;
       } else {
@@ -31,7 +32,6 @@ buttonsArray.forEach((button) => {
       if (finalResult % 1 !== 0) {
         inputField.value = finalResult.toFixed(2);
       }
-      console.log(finalResult);
     } else if (e.target.innerHTML == "AC") {
       finalResult = "";
       inputField.value = finalResult;
